@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Quadra Go</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-container">
+            <div class="login-box">
+                <h2>Login</h2>
+                
+                <div class="login-options">
+                    <button class="google-login" onclick="window.location.href='/auth/google'">
+                        <img src="/static/img/google-icon.svg" alt="Google icon">
+                        Login with Google
+                    </button>
+                    
+                    <div class="divider">
+                        <span>or login with email</span>
+                    </div>
+                    
+                    <form id="emailLoginForm" action="/auth/email" method="post">
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Email" required>
+                            <div class="error-message" id="emailError">Please enter a valid email address</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="password" id="password" name="password" placeholder="Password" required>
+                            <div class="error-message" id="passwordError">Password is required</div>
+                        </div>
+                        
+                        <button type="submit" class="login-submit">Login</button>
+                    </form>
+                    
+                    <p class="signup-link">Don't have an account? <a href="/signup">Sign up</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
